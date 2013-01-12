@@ -1,4 +1,9 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby1.9
+
+ENV['HOME'] ||= `echo ~`.strip
+ENV['GEM_HOME'] = File.expand_path('~/.gems')
+ENV['GEM_PATH'] = File.expand_path('~/.gems') + ":" + '/opt/ruby19/lib64/ruby/gems/1.9.1'
+require 'rubygems'
 
 root = File.dirname(File.dirname(File.expand_path(__FILE__)))
 $: << root + '/lib/regexper/lib'

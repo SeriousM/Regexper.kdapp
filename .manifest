@@ -12,6 +12,10 @@
     "blocks": {
       "app": {
         "files": [
+          "./lib/regexper/app/assets/javascripts/vendor/raphael-min.js",
+          "./app/init.coffee",
+          "./app/models.coffee",
+          "./app/views.coffee",
           "./index.coffee"
         ]
       }
