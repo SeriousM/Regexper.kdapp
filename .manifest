@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "name": "Regexper",
+  "identifier": "com.koding.apps.regexper",
+  "path": "~/Applications/Regexper.kdapp",
+  "homepage": "https://github.com/halk/Regexper.kdapp",
+  "author": "Halil Köklü",
+  "repository": "git://github.com/halk/Regexper.kdapp.git",
+  "description": "You find regular expressions a hard nut to crack? Let Regexper visualize that for you. It is based on Regexper.com.",
+  "category": "miscellaneous",
+  "source": {
+    "blocks": {
+      "app": {
+        "files": [
+          "./index.coffee"
+        ]
+      }
+    },
+    "stylesheets": []
+  },
+  "options": {
+    "type": "tab"
+  },
+  "icns": {
+    "128": "./resources/icons/regexper.128.png",
+    "256": "./resources/icons/regexper.256.png",
+    "512": "./resources/icons/regexper.512.png"
+  },
+  "screenshots": []
+}
