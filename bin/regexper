@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+
+root = File.dirname(File.dirname(File.expand_path(__FILE__)))
+$: << root + '/lib/regexper/lib'
+
+require 'json'
+require "regexper"
+
+regexp = ARGV.first
+response = ''
+
+begin
+  response = JSON.generate({
+    :raw_expr => regexp,
+    :structure => Regexper.parse(regexp).to_obj
+  }, :max_nesting => 1000)
+
+rescue Regexper::ParseError => error
+  response = JSON.generate({
+    :error => "Parse failed: (exception=\"#{error}\") (input=\"#{regexp}\")"
+  })
+
+rescue JSON::NestingError => error
+  response = JSON.generate({
+    :error => "Regexp contains excessive nesting (error: Excessive nesting: (exception=\"#{error}\") (input=\"#{regexp}\"))"
+  })
+
+rescue Exception => exception
+  response = JSON.generate({
+    :error => "Unexpected error: #{exception}"
+  })
+
+end
+
+puts response
