@@ -1,10 +1,8 @@
-KD.enableLogs()
-
 app = null
 
 do ->
   try
-    appView.addSubView app = new Regexper.Views.Main
+    appView.addSubView app = new RegexperKdapp.View
       cssClass  : "regexper"
 
   catch error

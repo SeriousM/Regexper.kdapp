@@ -1,7 +1,6 @@
+KD.enableLogs()
 
 # namespaces
-Regexper =
-  Models:
-    Regexper: null
-  Views:
-    Main: null
+RegexperKdapp =
+  Model:  null
+  View:   null

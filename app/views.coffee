@@ -1,5 +1,5 @@
 
-class Regexper.Views.Main extends KDView
+class RegexperKdapp.View extends KDView
   
   constructor:->
     
@@ -19,17 +19,21 @@ class Regexper.Views.Main extends KDView
         regex             :
           label           : "RegEx"
           name            : "regex"
+          validate        :
+            rules         :
+              required    : yes
+    
+    @form.on "FormValidationFailed", => @form.buttons["Please Help!"].hideLoader()
     
     @output = new KDScrollView
-      id: "regexper-output"
+      domId: "regexper-output"
   
   submit:(formData)->
     
     self = @
     {regex} = formData
-    model = new Regexper.Models.Regexper
-    model.parse regex, (result)->
-      self.output.setPartial result
+    model = new RegexperKdapp.Model
+    model.parse regex, $('#regexper-output'), ->
       self.form.buttons["Please Help!"].hideLoader()
   
   viewAppended:->

@@ -56,6 +56,7 @@ define(['eve'], function (eve) {
      |     text: "Dump"
      | }]);
     \*/
+    
     function R(first) {
         if (R.is(first, "function")) {
             return loaded ? first() : eve.on("raphael.DOMload", first);

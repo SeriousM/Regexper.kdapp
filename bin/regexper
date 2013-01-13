@@ -6,7 +6,7 @@ ENV['GEM_PATH'] = File.expand_path('~/.gems') + ":" + '/opt/ruby19/lib64/ruby/ge
 require 'rubygems'
 
 root = File.dirname(File.dirname(File.expand_path(__FILE__)))
-$: << root + '/lib/regexper/lib'
+$: << root + '/lib'
 
 require 'json'
 require "regexper"
