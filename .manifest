@@ -1,6 +1,6 @@
 {
   "devMode": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "Regexper",
   "identifier": "com.koding.apps.regexper",
   "path": "~/Applications/Regexper.kdapp",

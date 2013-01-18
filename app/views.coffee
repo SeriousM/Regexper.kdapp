@@ -19,16 +19,27 @@ class RegexperKdapp.View extends KDView
         regex             :
           label           : "RegEx"
           name            : "regex"
+          placeholder     : "type in JavaScript-like regular expression"
           validate        :
             rules         :
               required    : yes
+        examples          :
+          label           : "Examples"
+          name            : "examples"
+          itemClass       : KDSelectBox
+          selectOptions   : ({title: val.title, value: key} for val, key in RegexperKdapp.Settings.Examples)
+          change          : => 
+            debugger
+            {examples, regex} = @form.inputs
+            example = RegexperKdapp.Settings.Examples[examples.getValue()]
+            regex.setValue example.regex
     
     @form.on "FormValidationFailed", => @form.buttons["Please Help!"].hideLoader()
     
     @output = new KDScrollView
       cssClass: "regexper-output"
     
-    @output.setPartial "Type in JavaScript-like regular expression into the field above!"
+    @output.setPartial "Type in JavaScript-like regular expression into the field above or select an example!"
   
   submit:(formData)->
     
