@@ -11,7 +11,7 @@ $: << root + '/lib'
 require 'json'
 require "regexper"
 
-regexp = ARGV.first.gsub(/&lsquoRGXP;/, "'")
+regexp = ARGV.first.gsub(/&lsquoRGXPR;/, "'")
 response = ''
 
 begin
