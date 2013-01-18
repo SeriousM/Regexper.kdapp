@@ -21,7 +21,7 @@
       }
     },
     "stylesheets": [
-      "./resources/sstyle.css"
+      "./resources/style.css"
     ]
   },
   "options": {
