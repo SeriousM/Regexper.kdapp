@@ -26,14 +26,14 @@ class RegexperKdapp.View extends KDView
     @form.on "FormValidationFailed", => @form.buttons["Please Help!"].hideLoader()
     
     @output = new KDScrollView
-      domId: "regexper-output"
+      cssClass: "regexper-output"
   
   submit:(formData)->
     
     self = @
     {regex} = formData
     model = new RegexperKdapp.Model
-    model.parse regex, $('#regexper-output'), ->
+    model.parse regex, @output.getDomElement(), ->
       self.form.buttons["Please Help!"].hideLoader()
   
   viewAppended:->

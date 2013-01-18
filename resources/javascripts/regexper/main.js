@@ -1,4 +1,4 @@
-define(['raphael/raphael.amd'], function(Raphael) {
+define(['raphael'], function() {
     var base_path_attrs = {
             'stroke-width': 2
         },
@@ -6,7 +6,7 @@ define(['raphael/raphael.amd'], function(Raphael) {
             fill: '#6b6659',
             'stroke-width': 2
         };
-
+    
     var Regexper = {
         extend: function(target) {
             var i, key;
@@ -21,7 +21,6 @@ define(['raphael/raphael.amd'], function(Raphael) {
         draw: function(paper_container, data, complete) {
             Raphael(paper_container, 2, 2, function() {
                 var paper = this;
-                
                 Regexper.render(paper, data.structure, function(expression) {
                     var box, offset,
                         x = 20,

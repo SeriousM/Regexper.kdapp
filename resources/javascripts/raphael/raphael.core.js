@@ -5167,6 +5167,12 @@ define(['eve'], function (eve) {
      | paper.set(paper.circle(100, 100, 20), paper.circle(110, 100, 20)).red();
     \*/
     R.st = setproto;
+    
+    // change by halk
+    eve.on("raphael.DOMload", function () {
+        loaded = true;
+    });    
+    
     // Firefox <3.6 fix: http://webreflection.blogspot.com/2009/11/195-chars-to-help-lazy-loading.html
     (function (doc, loaded, f) {
         if (doc.readyState == null && doc.addEventListener){
@@ -5182,11 +5188,7 @@ define(['eve'], function (eve) {
         isLoaded();
     })(document, "DOMContentLoaded");
 
-    oldRaphael.was ? (g.win.Raphael = R) : (Raphael = R);
-    
-    eve.on("raphael.DOMload", function () {
-        loaded = true;
-    });       
+    oldRaphael.was ? (g.win.Raphael = R) : (Raphael = R);   
     
     return R;
 });

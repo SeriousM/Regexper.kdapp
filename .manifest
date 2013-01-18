@@ -1,4 +1,5 @@
 {
+  "devMode": true,
   "version": "0.1.0",
   "name": "Regexper",
   "identifier": "com.koding.apps.regexper",
@@ -19,7 +20,9 @@
         ]
       }
     },
-    "stylesheets": []
+    "stylesheets": [
+      "./resources/sstyle.css"
+    ]
   },
   "options": {
     "type": "tab"
