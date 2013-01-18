@@ -27,6 +27,8 @@ class RegexperKdapp.View extends KDView
     
     @output = new KDScrollView
       cssClass: "regexper-output"
+    
+    @output.setPartial "Type in JavaScript-like regular expression into the field above!"
   
   submit:(formData)->
     
@@ -40,6 +42,6 @@ class RegexperKdapp.View extends KDView
     
     super
     
-    @addSubView header = new KDHeaderView type : "big", title : "Regexper"
+    @addSubView header = new KDHeaderView type : "big", title : "Regexper <span>Credits: Jeff Avallone (<a href=\"http://regexper.com\" target=\"_blank\">Regexper.com</a>)</span>"
     @addSubView @form
     @addSubView @output

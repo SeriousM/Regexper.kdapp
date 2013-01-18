@@ -10,7 +10,9 @@ class RegexperKdapp.Model
     
     appDir = "/Users/#{@nickname}/Applications/Regexper.kdapp/"
     
-    @kc.run appDir + "bin/regexper '#{regex}'", (err, res)->
+    escapedRegex = regex.replace /'/, "&lsquoRGXP;"
+    
+    @kc.run appDir + "bin/regexper '#{escapedRegex}'", (err, res)->
       $(output).html('')
       
       require ['regexper'], (Regexper)->

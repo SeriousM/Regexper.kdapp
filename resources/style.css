@@ -1,1 +1,4 @@
-.regexper .regexper-output { padding: 10px; text-align: center; position: relative; }
+.regexper { overflow: auto; }
+.regexper form { margin-bottom: 5px; }
+.regexper .regexper-output { height: auto; width: auto; border: 5px solid #eee; padding: 5px 0px; text-align: center; position: relative; border-radius: 5px; -webkit-border-radius: 5px; }
+.regexper .kdheaderview span span { float: right; font-size: 60%; }
