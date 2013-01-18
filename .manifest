@@ -32,5 +32,8 @@
     "256": "./resources/icons/regexper.256.png",
     "512": "./resources/icons/regexper.512.png"
   },
-  "screenshots": []
+  "screenshots": [
+    "./resources/screenshots/install_github.png",
+    "./resources/screenshots/example_regex.png"
+  ]
 }
