@@ -19,6 +19,9 @@ In the meanwhile there are two options:
 
 ![](https://raw.github.com/halk/Regexper.kdapp/master/resources/screenshots/install_github.png)
 
+### Using OneClick
+[![Clone in Koding](http://kbutton.org/app.png?v1381186932)](http://kbutton.org/kodehub/Regexper.kdapp)
+
 ### Cloning manually
 
 1. Launch Terminal from your Koding App Store and type in the following:
